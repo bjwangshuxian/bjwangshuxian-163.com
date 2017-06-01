@@ -1,2 +1,0 @@
-class Qishi < ApplicationRecord
-end
