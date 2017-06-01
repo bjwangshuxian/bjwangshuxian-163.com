@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>login.html</title>
+	
+    <meta http-equiv="keywords" content="keyword1,keyword2,keyword3">
+    <meta http-equiv="description" content="this is my page">
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    
+    <!--<link rel="stylesheet" type="text/css" href="./styles.css">-->
+    <script type="text/javascript" src="/jquery-1.4.2.js"></script>
+	<script type="text/javascript">
+			 $(function(){
+			 	  $("#login").bind("click",function(){
+				  		$.ajax({
+							url:"/users.json",
+							type:"POST",
+							//发送数据的第一种格式，字符串...
+							//data:"username=zhangsan&age=19",
+							//发送数据的第二种格式，json 的格式..
+							data:{
+								phone:"15210915668",
+								password:"666666"
+							},
+							timeout:5000,
+							success:function(data){
+								/* JSONObject obj = new JSONObject(data.getString(0));
+								alert(obj.getString("phone")); */
+								alert("success");
+							},
+							error:function(){
+								alert("shibai");
+							}
+						})
+					
+					
+				  })
+			 })
+	</script>
+	
+
+  </head>
+  
+  <body>
+    	<input type="button" id="login" value="ajax提交">
+    	<div id="mydiv"></div>
+  </body>
+</html>
