@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Account</title>
+<link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script src="js/jquery.min.js"></script>
+<!-- Custom Theme files -->
+<!--theme-style-->
+<link href="css/style.css" rel="stylesheet" type="text/css" media="all" />	
+<!--//theme-style-->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="Fashion Mania Responsive web template, Bootstrap Web Templates, Flat Web Templates, Andriod Compatible web template, 
+Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyErricsson, Motorola web design" />
+<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+<!-- start menu -->
+<link href="css/memenu.css" rel="stylesheet" type="text/css" media="all" />
+<script type="text/javascript" src="js/memenu.js"></script>
+<script>$(document).ready(function(){$(".memenu").memenu();});</script>
+<script src="js/simpleCart.min.js"> </script>
+    <script type="text/javascript" src="/jquery-1.4.2.js"></script>
+	<script type="text/javascript">
+			 $(function(){
+			 	  $("#login").bind("click",function(){
+				  		$.ajax({
+							url:"/api/users/login",
+							type:"POST",
+							//发送数据的第一种格式，字符串...
+							//data:"username=zhangsan&age=19",
+							//发送数据的第二种格式，json 的格式..
+							 data:{
+								phone:$("#phone").value,
+								password:$("#password").value
+							}, 
+							timeout:5000,
+							success:function(data){
+								/* JSONObject obj = new JSONObject(data.getString(0));
+								alert(obj.getString("phone"));  */
+								alert("登录成功");
+								window.location.href = 'index.html?user_id=1';
+							},
+							error:function(){
+								alert("shibai")
+							}
+						})
+					
+					
+				  })
+			 })
+	</script>
+<!-- slide -->
+</head>
+<body>
+<!--header-->
+<div class="header">
+	<div class="header-top">
+		<div class="container">
+		<div class="col-md-4 world">
+					<ul >
+						<li>
+						<select class="in-drop">
+							  <option>用户</option>
+							  <option>管理</option>
+							  <option>取送</option>
+							  <option>加工</option>
+						</select>
+						</li>
+					</ul>
+				</div>
+				<div class="col-md-4 logo">
+					<a href="index.html"><img src="images/logo.png" alt=""></a>	
+				</div>
+		</div>
+		</div>
+		
+<!--//header-->
+<div class="account">
+	<div class="container">
+		<h1>Account</h1>
+		<div class="account_grid">
+			   <div class="col-md-6 login-right">
+				<form action="/api/users/login" method="POST">
+					<span>手机号</span>
+					<input id="phone" type="text" name="phone"> 
+				
+					<span>密码</span>
+					<input id="password" type="text" name="password"> 
+					<div class="word-in">
+				  		<a class="forgot" href="#">忘记密码 </a>
+				 		 <input id="login" type="button" value="登录">
+				 		 <!-- <input type="button" id="login" value="ajax获取json"> -->
+				  	</div>
+			    </form>
+			   </div>	
+			    <div class="col-md-6 login-left">
+			  	 <h4>给你妈妈般的呵护</h4>
+				 <p>washing。致力于快捷</p>
+				 <a class="acount-btn" href="/users/new">注册</a>
+			   </div>
+			   <div class="clearfix"> </div>
+			 </div>
+	</div>
+</div>
+
+<!--footer-->
+<div class="footer">
+	<div class="container">
+		<div class="footer-top">
+			<div class="col-md-4 top-footer1">
+				<h2>Newsletter</h2>
+					<form>
+						<input type="text" value="" onfocus="this.value='';" onblur="if (this.value == '') {this.value ='';}">
+						<input type="submit" value="SUBSCRIBE">
+					</form>
+			</div>
+			<div class="clearfix"> </div>	
+		</div>	
+	</div>
+	<div class="footer-bottom">
+		<div class="container">
+				<div class="col-md-3 footer-bottom-cate">
+					<h6>Categories</h6>
+					<ul>
+						<li><a href="#">Curabitur sapien</a></li>
+						<li><a href="#">Dignissim purus</a></li>
+						<li><a href="#">Tempus pretium</a></li>
+						<li><a href="#">Dignissim neque</a></li>
+						<li><a href="#">Ornared id aliquet</a></li>
+						
+					</ul>
+				</div>
+				<div class="col-md-3 footer-bottom-cate">
+					<h6>Feature Projects</h6>
+					<ul>
+						<li><a href="#">Curabitur sapien</a></li>
+						<li><a href="#">Dignissim purus</a></li>
+						<li><a href="#">Tempus pretium</a></li>
+						<li><a href="#">Dignissim neque</a></li>
+						<li><a href="#">Ornared id aliquet</a></li>
+						
+					</ul>
+				</div>
+				<div class="col-md-3 footer-bottom-cate">
+					<h6>Top Brands</h6>
+					<ul>
+						<li><a href="#">Curabitur sapien</a></li>
+						<li><a href="#">Dignissim purus</a></li>
+						<li><a href="#">Tempus pretium</a></li>
+						<li><a href="#">Dignissim neque</a></li>
+						<li><a href="#">Ornared id aliquet</a></li>
+						<li><a href="#">Ultrices id du</a></li>
+						<li><a href="#">Commodo sit</a></li>
+						
+					</ul>
+				</div>
+				<div class="col-md-3 footer-bottom-cate cate-bottom">
+					<h6>Our Address</h6>
+					<ul>
+						<li>Aliquam metus  dui. </li>
+						<li>orci, ornareidquet</li>
+						<li> ut,DUI.</li>
+						<li>nisi, dignissim</li>
+						<li>gravida at.</li>
+						<li class="phone">PH : 6985792466</li>
+					</ul>
+				</div>
+				<div class="clearfix"> </div>
+				<p class="footer-class">Copyright &copy; 2015.Company name All rights reserved.<a target="_blank" href="http://www.cssmoban.com/">&#x7F51;&#x9875;&#x6A21;&#x677F;</a></p>
+			</div>
+	</div>
+</div>
+
+<!--//footer-->
+</body>
+</html>

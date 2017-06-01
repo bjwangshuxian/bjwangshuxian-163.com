@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  user_id: 1
+  qishi_id: 1
+  count: 1
+  price: 9.99
+  statues: 1
+
+two:
+  user_id: 1
+  qishi_id: 1
+  count: 1
+  price: 9.99
+  statues: 1

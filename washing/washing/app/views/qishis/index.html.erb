@@ -1,0 +1,31 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Qishis</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Phone</th>
+      <th>Order</th>
+      <th>Salary</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @qishis.each do |qishi| %>
+      <tr>
+        <td><%= qishi.phone %></td>
+        <td><%= qishi.order_id %></td>
+        <td><%= qishi.salary %></td>
+        <td><%= link_to 'Show', qishi %></td>
+        <td><%= link_to 'Edit', edit_qishi_path(qishi) %></td>
+        <td><%= link_to 'Destroy', qishi, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Qishi', new_qishi_path %>
